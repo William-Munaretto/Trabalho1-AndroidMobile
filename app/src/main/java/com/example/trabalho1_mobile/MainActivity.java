@@ -53,9 +53,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                     @Override
                     public void run() {
                         SystemClock.sleep(5000);
-                        new Thread(new Runnable() {
-                            @Override
-                            public void run() {
                                 try {
                                     String url = editUrl.getText().toString();
                                     InputStream in = new URL(url).openStream();
@@ -75,8 +72,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                                     e.printStackTrace();
                                 }
                             }
-                        });
-                    }
+           
                 }).start();
     }
 }
